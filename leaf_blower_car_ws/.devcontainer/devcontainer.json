@@ -1,0 +1,27 @@
+/* Reference: https://aka.ms/devcontainer.json */
+{
+    "name": "Leaf Blower Car WS",
+    "dockerComposeFile": "../docker/compose.yaml",
+    "service": "leaf-blower-car-ws",
+    // workspace settings
+    "workspaceFolder": "/home/user/leaf-blower-car/leaf_blower_car_ws",
+    // Vscode extensions
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "twxs.cmake",
+                "ms-vscode.cpptools-extension-pack",
+                "donjayamanne.python-extension-pack",
+                "eamodio.gitlens",
+                "mhutchie.git-graph",
+                "streetsidesoftware.code-spell-checker",
+                "ms-iot.vscode-ros",
+                "github.copilot",
+                "cweijan.vscode-office",
+                "ms-python.black-formatter"
+            ]
+        }
+    },
+    // Lifecycle scripts
+    "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/postCreateCommand.sh"
+}
