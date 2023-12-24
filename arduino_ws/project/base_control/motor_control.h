@@ -23,8 +23,7 @@ namespace MOTOR {
 // extern Adafruit_DCMotor *motor[4];
 
 void Init();
-void Forward(int PWM);
-void Stop();
+void SetSpeed(int PWM_0, int PWM_1, int PWM_2, int PWM_3);
 
 }
 
