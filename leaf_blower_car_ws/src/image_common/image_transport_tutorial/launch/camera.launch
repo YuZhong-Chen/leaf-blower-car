@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="image_transport_tutorial" type="my_publisher" name="camera_node" output="screen" args="2" />
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find image_transport_tutorial)/rviz/camera.rviz" />
+</launch>
