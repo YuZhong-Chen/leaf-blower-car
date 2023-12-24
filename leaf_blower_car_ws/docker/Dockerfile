@@ -4,6 +4,10 @@ ARG TARGET_PLATFORM=amd
 # Base Image : https://hub.docker.com/r/arm64v8/ros/tags?page=1&name=noetic
 FROM arm64v8/ros:noetic AS arm
 
+RUN apt-get update && apt-get install -y \
+    libyaml-cpp-dev \
+    cv-bridge
+
 # Base Image : https://hub.docker.com/r/osrf/ros/tags?page=1&name=noetic
 FROM osrf/ros:noetic-desktop-full AS amd
 
