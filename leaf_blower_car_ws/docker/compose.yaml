@@ -12,14 +12,8 @@ services:
     working_dir: /home/user/leaf-blower-car/leaf_blower_car_ws
     environment:
       - DISPLAY=${DISPLAY}
-      # Set ros2 environment variables.
-      # References:
-      # - https://docs.ros.org/en/humble/Concepts/Intermediate/About-Domain-ID.html
-      # - https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html
-      # - https://docs.ros.org/en/humble/Tutorials/Demos/Logging-and-logger-configuration.html#console-output-colorizing
-      - ROS_DOMAIN_ID=42
-      - ROS2_WS=/home/user/leaf-blower-car/leaf_blower_car_ws
-      - RCUTILS_COLORIZED_OUTPUT=1
+      # Set ros environment variables.
+      - CATKIN_WS=/home/user/leaf-blower-car/leaf_blower_car_ws
       # If you want to access GPU, please uncomment the lines below.
       # Reference : https://docs.docker.com/compose/gpu-support/
       # deploy:
@@ -38,12 +32,8 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       # Mount device
       - /dev:/dev
-      # Direct Rendering Infrastructure
-      - /dev/dri:/dev/dri
-      # Mount sound card to prevent Gazebo warning.
-      - /dev/snd:/dev/snd
       # Mount Gazebo models directory to reuse models downloaded during first launch.
       # Reference: https://answers.ros.org/question/365658
-      - ./cache/.gazebo:/home/user/.gazebo
+      # - ./cache/.gazebo:/home/user/.gazebo
       # Mount workspace
       - ../..:/home/user/leaf-blower-car

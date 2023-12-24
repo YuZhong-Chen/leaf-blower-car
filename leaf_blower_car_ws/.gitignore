@@ -2,8 +2,7 @@
 
 # ROS2 basic directories
 /build
-/install
-/log
+/devel
 
 # Gazebo cache
 docker/cache/*
