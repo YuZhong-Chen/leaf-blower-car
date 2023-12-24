@@ -1,7 +1,11 @@
 version: '3'
 services:
   leaf-blower-car-ws:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - TARGET_PLATFORM=amd
     image: yuzhong1214/leaf-blower-car-ws
     container_name: leaf-blower-car-ws
     stdin_open: true

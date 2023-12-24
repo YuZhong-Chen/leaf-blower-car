@@ -1,5 +1,13 @@
+# Choose the architecture: arm or amd
+ARG TARGET_PLATFORM=amd
+
+# Base Image : https://hub.docker.com/r/arm64v8/ros/tags?page=1&name=noetic
+FROM arm64v8/ros:humble AS arm
+
 # Base Image : https://hub.docker.com/r/osrf/ros/tags?page=1&name=noetic
-FROM osrf/ros:noetic-desktop-full
+FROM osrf/ros:noetic-desktop-full AS amd
+
+FROM $TARGET_PLATFORM
 
 LABEL org.opencontainers.image.authors="yuzhong1214@gmail.com"
 
