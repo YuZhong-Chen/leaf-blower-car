@@ -44,6 +44,14 @@ void BackwardRight() {
   MOTOR::SetSpeed(0, -150, -150, 0);
 }
 
+void RotationRight() {
+  MOTOR::SetSpeed(150, -150, 150, -150);
+}
+
+void RotationLeft() {
+  MOTOR::SetSpeed(-150, 150, -150, 150);
+}
+
 void Stop() {
   MOTOR::SetSpeed(0, 0, 0, 0);
 }

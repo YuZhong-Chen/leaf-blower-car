@@ -19,6 +19,8 @@ void ForwardLeft();
 void ForwardRight();
 void BackwardLeft();
 void BackwardRight();
+void RotationRight();
+void RotationLeft();
 void Stop();
 
 }
